@@ -14,6 +14,11 @@ const Match = ({ match, currentMatchIndex, nextMatch }) => {
       </div>)}
     </StyledCarousel>
 
+  const handleDecision = (e) => {
+    e.preventDefault();
+    nextMatch(currentMatchIndex, e.target.value);
+  }
+
   return (
     <StyledCurrentMatch>
       <div>
@@ -26,7 +31,10 @@ const Match = ({ match, currentMatchIndex, nextMatch }) => {
           {match.bio}
         </p>
       </div>
-      <button onClick={() => nextMatch(currentMatchIndex)}>Next</button>
+      <div>
+        <button type="submit" value="dislike" onClick={handleDecision}>Dislike</button>
+        <button type="submit" value="like" onClick={handleDecision}>Like</button>
+      </div>
     </StyledCurrentMatch>
   )
 }

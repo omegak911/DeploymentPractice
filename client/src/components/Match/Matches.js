@@ -26,7 +26,8 @@ class Matches extends React.Component {
       .catch(err => console.error(err));
   }
 
-  nextMatch = (index) => {
+  nextMatch = (index, decision) => {
+    console.log(`do something with their decision: ${decision}`)
     this.setState({ currentMatchIndex: index + 1 });
   }
 
