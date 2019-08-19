@@ -1,8 +1,11 @@
 import React from 'react';
+import {
+  StyledWelcome
+} from '../styles/index';
 
 const Home = ({ changeView }) => {
   return (
-    <div>
+    <StyledWelcome>
       <h3>Welcome to Unicorn</h3>
 
       <p>
@@ -18,7 +21,7 @@ const Home = ({ changeView }) => {
       <div>
         <button onClick={() => changeView('matches')}>Matches</button>
       </div>
-    </div>
+    </StyledWelcome>
   )
 }
 
