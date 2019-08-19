@@ -30,7 +30,7 @@ class Matches extends React.Component {
     let { matches, currentMatchIndex } = this.state;
 
     if (currentMatchIndex >= 0 && currentMatchIndex < matches.length) {
-      return <Match match={matches[currentMatchIndex]} />
+      return <Match match={matches[currentMatchIndex]} currentMatchIndex={currentMatchIndex} nextMatch={this.nextMatch}/>
     } else {
       return <div>Sorry, no matches right now</div>
     }
