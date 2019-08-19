@@ -2,6 +2,10 @@ import React from 'react';
 import axios from 'axios';
 import Match from './Match';
 
+import {
+  StyledMatchesContainer
+} from '../../styles/index';
+
 class Matches extends React.Component {
   constructor(props) {
     super(props);
@@ -38,7 +42,9 @@ class Matches extends React.Component {
 
   render() {
     return (
-      this.renderView()
+      <StyledMatchesContainer>
+        {this.renderView()}
+      </StyledMatchesContainer>
     )
   }
 }

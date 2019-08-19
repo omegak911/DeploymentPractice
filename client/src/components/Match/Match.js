@@ -1,6 +1,9 @@
 import React from 'react';
 
 import styled from 'styled-components';
+import {
+  StyledCurrentMatch
+} from '../../styles/MatchesStyles';
 
 const Match = ({ match, currentMatchIndex, nextMatch }) => {
   const pictures = 
@@ -12,7 +15,7 @@ const Match = ({ match, currentMatchIndex, nextMatch }) => {
     </StyledCarousel>
 
   return (
-    <div>
+    <StyledCurrentMatch>
       <div>
         pictures go here
         {pictures}
@@ -24,7 +27,7 @@ const Match = ({ match, currentMatchIndex, nextMatch }) => {
         </p>
       </div>
       <button onClick={() => nextMatch(currentMatchIndex)}>Next</button>
-    </div>
+    </StyledCurrentMatch>
   )
 }
 
